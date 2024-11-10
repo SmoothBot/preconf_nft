@@ -4,11 +4,11 @@ pragma solidity ^0.8.13;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract Counter is ERC721, Ownable {
+contract Preconf is ERC721, Ownable {
     bool public isMinted;
     string private _tokenURI;
 
-    constructor() ERC721("UniqueCounter", "UCTR") Ownable(msg.sender) {}
+    constructor() ERC721("Preconf", "BASED") Ownable(msg.sender) {}
 
     function mint(address to) public onlyOwner {
         require(!isMinted, "NFT already minted");
@@ -21,7 +21,7 @@ contract Counter is ERC721, Ownable {
     }
 
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
-        _requireMinted(tokenId);
+        require(tokenId == 0 && isMinted, "Token does not exist");
         return _tokenURI;
     }
 }
