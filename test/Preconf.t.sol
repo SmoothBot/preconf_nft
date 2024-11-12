@@ -7,12 +7,11 @@ import {Preconf} from "../src/Preconf.sol";
 contract PreconfTest is Test {
     Preconf public nft;
     address owner;
-    address user;
+    address user = 0x3B16821A5dBBFF86E4a88eA0621EC6be016cd79A;
     string constant TEST_URI = "ipfs://QmTest";
 
     function setUp() public {
         owner = makeAddr("owner");
-        user = makeAddr("user");
         
         vm.prank(owner);
         nft = new Preconf();
@@ -30,7 +29,7 @@ contract PreconfTest is Test {
         nft.mint(user);
     }
 
-    function test_SuccessfulMint() public {
+    function test_SuccessfulMintToJD() public {
         vm.prank(owner);
         nft.mint(user);
 

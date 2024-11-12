@@ -20,8 +20,7 @@ contract Preconf is ERC721, Ownable {
         _tokenURI = newTokenURI;
     }
 
-    function tokenURI(uint256 tokenId) public view override returns (string memory) {
-        require(tokenId == 0 && isMinted, "Token does not exist");
+    function tokenURI(uint256 _tokenId) public view override returns (string memory) {
         return _tokenURI;
     }
 }

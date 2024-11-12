@@ -1,0 +1,13 @@
+{
+    "description": "An NFT to commemorate the first Ethereum preconfirmation", 
+    "external_url": "https://gateway.pinata.cloud/ipfs/QmXdXoVYL1KerFAmM1x4ncmxzdE2QChbX3QgQsTBV3tGPM", 
+    "animation_url": "https://gateway.pinata.cloud/ipfs/QmaCgWmeWsH4h1sG7kHhs3QW2JCE6m3YAjjfYwJXq1aWZ3",
+    "image": "https://gateway.pinata.cloud/ipfs/QmXdXoVYL1KerFAmM1x4ncmxzdE2QChbX3QgQsTBV3tGPM", 
+    "name": "Preconf",
+    "attributes": [ 
+        {
+          "trait_type": "First Ethereum Preconf", 
+          "value": "True"
+        }
+    ]
+}

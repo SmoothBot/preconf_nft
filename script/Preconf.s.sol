@@ -13,6 +13,7 @@ contract PreconfScript is Script {
         vm.startBroadcast();
 
         preconf = new Preconf();
+        preconf.setTokenURI("ipfs://QmP2CnQRXdz415rEnjsQSbGQpVL6zV9b6goW9m6wW9L7p8");
 
         vm.stopBroadcast();
     }
